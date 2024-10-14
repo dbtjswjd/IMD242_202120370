@@ -18,7 +18,7 @@ void draw(){
   tileNum = int(map(mouseX, 0, width ,3, 16 +1));
   float tileSize = width / float(tileNum);
   
-  noiseMult = pow(10, map(mouseY, 0, height, 1,- 1 ));
+  noiseMult = pow(10, map(mouseY, 0, height,0.1,-10));
   //noiseMult =map(mouseY, 0, height, 0.001, 0.1);
   
   for (int row = 0; row < tileNum; row++) {
@@ -39,7 +39,7 @@ void draw(){
       translate(centerX, centerY);
       
       
-      rotate(radians(-90 + 180 * noiseVal  ));
+      rotate(radians(-90 + 180 * noiseVal));
       
       //rotate(radians(360 * noiseVal));
       
@@ -47,9 +47,6 @@ void draw(){
       //rotate(radians(30 * randomVal));
       
       line(0, 0, tileSize *0.8 * 0.5, 0);
-      
-      float x = map(noise(xoff),0,height, 1, 5);
-      rotate(radians(x));
       
       noStroke();
       fill(255);
