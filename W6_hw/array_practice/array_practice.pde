@@ -98,11 +98,11 @@ int T = total;
   textSize(45);
   fill(255);
   text("AVERAGE NUMBER OF FRUITS : ",
-    width * 0.5 - 70, height * 0.5 + 235);
+    width * 0.5 - 10, height * 0.5 + 235);
 
   textSize(45);
   fill(255);
-  text(average, width * 0.5 + 250, height * 0.5 + 235);
+  text(average, width * 0.5 + 310, height * 0.5 + 235);
   
   textSize(24);
   fill(255);
