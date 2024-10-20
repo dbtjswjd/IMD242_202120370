@@ -14,9 +14,9 @@ void setup() {
   fruitAmts = new int[fruitNames. length];
   for (int n = 0; n < fruitAmts. length; n++) {
     if (n == 0) {
-      fruitAmts[n] = 55;
+      fruitAmts[n] =int( random(10, 120));
     } else {
-      fruitAmts[n] = int(random(50, 120));
+      fruitAmts[n] = int(random(10, 120));
     }
   }
 
