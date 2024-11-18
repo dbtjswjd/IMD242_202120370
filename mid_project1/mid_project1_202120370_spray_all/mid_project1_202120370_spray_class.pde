@@ -230,7 +230,7 @@ void display2() {
         "\nCy: " + int(drop.Cy) +
         "\nLength: " + int(drop.Dleng) +
         "\nOpacity: " + int(drop.opacity1),
-        10, 30);// 10, 30에 위치하고 drop의 변수를 정수로 변환 
+        10, 30);// 10, 30에 위치하고 drop의 변수를 정수로 변환 
     }
   }
 
