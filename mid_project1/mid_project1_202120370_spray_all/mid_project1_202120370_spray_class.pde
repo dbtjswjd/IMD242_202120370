@@ -1,7 +1,8 @@
 void initializerBalls() {
 Balls1 = new ArrayList<Ball>();
 ballMain1 = new ArrayList<MBall>();
-
+//챗 gpt활용 keypressed 상용시 내가원하는 키에다가 동작 입력가능 
+//전체 리셋시키기 
 
 
   int numBalls1 = int(random(40, 150));
@@ -233,6 +234,7 @@ void display2() {
     }
   }
 
+
   class Ball {
   float Ex, Ey;
   float Evx, Evy;
@@ -250,7 +252,6 @@ void display2() {
     Evy = Bspeed * sin(radians(deg));
     this.Brad = Brad;
     this.circleColor = circleColor;
-    //int randomColor2 = circleColor[int(random(circleColor.length))];
   }
 
   void update3( ) {
@@ -302,7 +303,6 @@ void display2() {
   }
 }
 
-
 class MBall {
   float MBx, MBy;
   float MBrad;
@@ -333,11 +333,5 @@ class MBall {
     popMatrix();
   }
   
-  //boolean isColliding(Ball other) {
-  //  float dx = other.Ex - MBx;
-  //  float dy = other.Ey = MBy;
-  //  float distance = sqrt(dx * dx + dy * dy);
-    
-  //  return distance < (MBrad + other.Brad);
-  //}
+  
 }

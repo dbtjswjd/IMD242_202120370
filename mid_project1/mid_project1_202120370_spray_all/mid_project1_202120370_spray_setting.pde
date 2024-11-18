@@ -23,7 +23,7 @@ int[] circleColor = {
   0xFFFF0A0A,
   0xFFFF8C00
 
-};
+};//part2 컬러 
 
 int scene = 0;//첫번쨰 화면인것을 나타냄
 
@@ -52,8 +52,10 @@ void setup() {
 
     groups1.add(new Group1(random1X, random1Y, random1Scale, random1Speed, strokeColor));
   }
+   // 가로 세로 랜덤한 거리상에 30 - 80개의 랜덤한 그룹을 분포시킴 크기는 0.15배 - 0.35배로 축소해 랜덤  설정 스피드도 0.5 - 2로 랜덤설
 
   groupMains1.add(new GroupMain1(0, 0, 0.5, strokeColor ));
+  // 메인그룹 스케일 0.5사이즈 = 50퍼 
 
   int numBalls1 = int(random(40, 150));
   for (int idx = 0; idx < numBalls1; idx++) {
@@ -84,6 +86,8 @@ void drawScene1() {
 
 
   int dropCount = int(map(mouseX, 0, width, 10, maxDrops));
+  //맵핑화 시켜서 x축을 오른쪽으로 이동시킬수록 많은 수의 drop효과
+  //추가 최소는 10 최대는 150 (최소로했을떄 왜인지 모르겠지만 groupdl 빨라지는거같다.. 기분탓..?)
 
   while (drops1.size() < dropCount) {
     drops1.add(new Drop());
@@ -91,7 +95,9 @@ void drawScene1() {
   while (drops1.size() > dropCount) {
     drops1. remove(drops1.size() -1);
   }
-
+  //if 보다 반복구존에 whiledl 적합
+  
+  
   for (Drop d : drops1) {
     d.fallD();
     d.display2();
@@ -101,7 +107,8 @@ void drawScene1() {
   if (!drops1.isEmpty()) {
     Drop targetDrop = drops1.get(0);
     groupMains1.get(0).arrayListText1(targetDrop);
-  }
+  } 
+  //첫번째 객체에 대한 값만 출력 GPT
 
   for (Group1 g1 : groups1) {
     g1.update1();
@@ -113,9 +120,7 @@ void drawScene1() {
     gm1.display3();
   }
 
-  //fill(255);
-  //textSize(10);
-  //text("drawscene1:" + scene, 10, 30); array값 나타내기..씬하나만..? 수정해야할듯
+  
 }
 
 //scene2에서 배경 컬러 변경
@@ -149,20 +154,6 @@ if (!Balls1.isEmpty()) {
 }
 
 }
-
-
-//for (MBall MB1 : ballMain1) {
-
-//    Balls1.remove(idx);
-//    break;
-//  }
-//}
-
-//for(Ball B1 : Balls1) {
-//  B1.update3();
-//  B1.bound2();
-//  B1.display4();
-//}
 
 
 
