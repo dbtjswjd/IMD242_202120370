@@ -242,7 +242,7 @@ void display2() {
   int circleColor;
   float maxSpeed = 10;
   float minSpeed = 2;
-  float firction = 0.999;
+  float firction = 0.99;
 
   Ball(float Ex, float Ey, float Bspeed, float Brad, int circleColor) {
     this.Ex = Ex;
@@ -262,16 +262,6 @@ void display2() {
     Evy *= firction;
     //float friction, float minSpeed
     //부딛히고 멈추지않는 변수 마찰 어려웡 담에하기
-
-    float Bspeed = sqrt(Evx * Evx + Evy * Evy);
-
-    if (Bspeed > maxSpeed) {
-      Evx = (Evx / Bspeed) * maxSpeed;
-      Evy = (Evy / Bspeed) * maxSpeed;
-    } else if (Bspeed < minSpeed) {
-      Evx = (Evx / Bspeed) * minSpeed;
-      Evy = (Evy / Bspeed) * minSpeed;
-    }//else if 가 조금더 명시적으로 정확도가 높다..!?
   }
 
   void bound2() {
