@@ -17,13 +17,20 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
+  noStroke();
   // image(cp, 0, 0, width, height); // 작게만든 화면을 크게늘리며 픽셀화처럼 해상도를 낮춤
   for (let y = 0; y < cpH; y++) {
     for (let x = 0; x < cpW; x++) {
       let colour = cp.get(x, y);
-      fill(colour[0], colour[1], colour[2]);
-      circle(10 * x + 5, 10 * y + 5, 10);
+      let b = brightness(colour);
+      let diameter = map(b, 0, 255, 0, 50);
+      fill(255);
+      circle(10 * x + 5, 10 * y + 5, diameter);
+
+      // fill(colour[0], colour[1], colour[2]);
+      // noStroke();
+      // circle(10 * x + 5, 10 * y + 5, 10);
     }
   }
 }
