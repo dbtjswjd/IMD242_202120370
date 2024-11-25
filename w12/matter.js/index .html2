@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12주차 matter.js stp2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <!-- script 로 바로 넣는건 비추 -->
+    <script src="./script 2/matter-example.js" defer></script>
+    <!-- 바디가 아닌 헤드에 미리 넣는 구문에는 defer를 꼭 붙여줘야한다. body에다가 script넣는 것은 너무 올드한 방법 -->
+  </head>
+  <body></body>
+</html>
