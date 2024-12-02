@@ -75,5 +75,17 @@ Render.lookAt(render, {
 
 function setup() {
   createCanvas(600, 800);
-  console.log;
+  background(255);
+}
+
+function draw() {
+  background(255);
+  walls.forEach((eachwall) => {
+    beginShape();
+    eachWall.vertices.forEach((eacgVertex)=> (
+      vertex(eachVertex.x, eacgVertex.y);
+    ));
+    
+  });
+  endShape();
 }
