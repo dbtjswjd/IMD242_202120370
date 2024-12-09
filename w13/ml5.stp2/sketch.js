@@ -73,13 +73,16 @@ function draw() {
       noStroke();
       circle(keypoint.x, keypoint.y, 5);
     }
+    let faceWidth = calcfaceWidth(face);
+    console.log('거리기준값', faceWidth);
+
     let mouthDist = calcMouthOpen(face);
     console.log(mouthDist);
+
+    let nomalMouth = mouthDist / faceWidth;
+
     let fWeight = map(mouthDist, 0, 100, 100, 900);
     document.documentElement.style.setProperty('--fWeight', fWeight);
-
-    let faceWidth = calcfaceWidth(face);
-    console.log(faceWidth);
   }
 }
 
